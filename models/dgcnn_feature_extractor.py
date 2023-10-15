@@ -78,5 +78,7 @@ class DGCNN_Feature_Extractor(nn.Module):
         # trans_feat = None
         # return x, trans_feat
 
+        x1 = F.normalize(x1, dim=1) # hyperspherical manifold
+        assert torch.isclose(torch.sum(torch.pow(x1[0], 2)), 1)
         assert x1.shape == (batch_size, 1024)
         return x1
