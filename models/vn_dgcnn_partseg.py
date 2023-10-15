@@ -1,8 +1,8 @@
 import torch.nn as nn
 import torch.utils.data
 import torch.nn.functional as F
-from models.vn_layers import *
-from models.utils.vn_dgcnn_util import get_graph_feature
+from vn_layers import *
+from utils.vn_dgcnn_util import get_graph_feature
 
 
 class get_model(nn.Module):
