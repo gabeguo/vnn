@@ -31,6 +31,8 @@ class get_model(nn.Module):
                                    self.bn5,
                                    nn.LeakyReLU(negative_slope=0.2))
         
+        # TODO: more layers???
+        
         # self.linear1 = nn.Linear(1024*2, 512, bias=False)
         # self.bn6 = nn.BatchNorm1d(512)
         # self.dp1 = nn.Dropout(p=0.5)
