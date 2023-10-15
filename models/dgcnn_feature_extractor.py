@@ -4,9 +4,9 @@ import torch.nn.functional as F
 from utils.dgcnn_util import get_graph_feature
 
 
-class get_model(nn.Module):
+class DGCNN_Feature_Extractor(nn.Module):
     def __init__(self, n_knn):
-        super(get_model, self).__init__()
+        super(DGCNN_Feature_Extractor, self).__init__()
         self.n_knn = n_knn
         
         self.bn1 = nn.BatchNorm2d(64)
