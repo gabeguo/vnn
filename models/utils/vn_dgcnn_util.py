@@ -19,7 +19,7 @@ def knn(x, k):
 def get_graph_feature(x, k=20, idx=None, x_coord=None):
     batch_size = x.size(0)
     num_points = x.size(3)
-    x = x.view(batch_size, -1, num_points)
+    x = x.reshape(batch_size, -1, num_points)#x.view(batch_size, -1, num_points)
     if idx is None:
         if x_coord is None: # dynamic knn graph
             idx = knn(x, k=k)
